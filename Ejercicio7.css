@@ -1,0 +1,156 @@
+
+/************* BODY Y ESTRUCTURA +++++++++++++*/
+
+/*(0,0,1)*/
+body {
+    font-family: "Futura Medium", "Gill Sans", "Verdana", sans-serif;
+    font-size: 20pt;
+    color: black;
+    background-color: rgba(185,188,188,1);
+    margin: 0;
+}
+
+/*(0,0,1)*/
+header, footer {
+    background-color: black;
+    color: rgba(185,188,188,1);
+    margin: 0;
+}
+
+
+
+/************* MENU NAVEGACIÓN +++++++++++++*/
+
+
+/************* ENLACES +++++++++++++*/
+
+ /*(0,0,1)*/
+a {
+    text-decoration: none; /* Eliminar el subrayado de los links */
+}
+/*(0,1,1)*/
+a:link { color: rgb(75, 73, 73);}
+a:visited { color: purple; }
+a:hover {color: black;}
+a:active { color: orange; }
+
+/**************************** MAIN *******************************/
+
+/*(0,0,1)*/
+main {
+    
+    padding: 3em;
+}
+
+/*(0,0,2)*/
+main img {
+    width: 90%;
+}
+
+/************* PÁRRAFOS +++++++++++++*/
+
+
+/*(0,0,1)*/
+p { font-size: 0.7em;
+    text-align: left;
+    text-indent: 50px;
+}
+
+/*(0,0,2)*/
+p::first-letter { font-size: 1.6em;
+}
+
+
+/************* LISTAS +++++++++++++*/
+
+/*(0,0,1)*/
+ul { /* Todas las unordered lists */
+
+    text-decoration: none;
+    list-style-type: square;
+}
+
+
+
+/************* TABLAS +++++++++++++*/
+
+/*(0,0,1)*/
+table {
+    background-color: gray;
+    color: black;
+    width: 70%;
+}
+/*(0,0,1)*/ 
+td { text-align:  center;
+    border-style: solid;
+    padding: 0.7em; } 
+
+
+
+/*(0,0,1)*/
+body { 
+    display: grid;
+    grid: "h h"
+          "a b"
+          "f f";
+}
+
+/*(0,0,2)*/
+body > header { /*Pueden otros headers, como los contenidos en un article */
+    grid-area: h;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+
+/*(0,0,1)*/
+nav { 
+    grid-area: a; 
+    display: flex;
+    flex-direction: column; 
+    /*padding: 30px;*/
+}
+
+/*(0,0,1)*/
+nav a {
+    margin: 5px;
+}
+
+/*(0,0,1)*/
+main, article { 
+    grid-area: b; 
+    min-width: 12em;     
+}
+
+/*(0,0,1)*/
+footer{ 
+    grid-area: f;  
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 800px) {
+    /*(0,0,1)*/
+    body {
+        display : block;
+        
+    }
+    /*(0,0,1)*/
+    main {
+        padding: 1em;
+        
+    }
+    /*(0,0,2)*/
+    main > h2 {
+        margin: 0.5em;
+    }
+
+} 
+
+@media print {
+    /* hide navigation menu when printing */
+    /*(0,0,1)*/
+    nav, footer { display: none; }
+}
