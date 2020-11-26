@@ -1,3 +1,6 @@
+//La tarea 5 provoca que el archivo html no sea válido. Se desestima esta validación ya que
+//la plantilla inicial valida, y el html generado dinámicamente para la tarea 5 tiene fines pedagógicos
+
 /**
  * Clase destinada a encapsular jQuery en métodos
  * y así cumplir con el uso del paradigma orientado a objetos
