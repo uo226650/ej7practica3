@@ -89,7 +89,7 @@ class WebDinamica {
 
     sumaFilas() {
         var totalFila = 0;
-        $('tr').each(function () {
+        $('tr:not(.acc)').each(function () {
             $(this).children().each(function () {
                 totalFila += parseInt($(this).text());
             });
@@ -113,18 +113,18 @@ class WebDinamica {
         var total_col9 = 0;
 
         //Recorro las filas
-        $('tr').each(function () {
-
-            // .eq(0) representa la fila 1    
-            total_col1 += parseInt($(this).find('td').eq(0).text());
-            total_col2 += parseInt($(this).find('td').eq(1).text());
-            total_col3 += parseInt($(this).find('td').eq(2).text());
-            total_col4 += parseInt($(this).find('td').eq(3).text());
-            total_col5 += parseInt($(this).find('td').eq(4).text());
-            total_col6 += parseInt($(this).find('td').eq(5).text());
-            total_col7 += parseInt($(this).find('td').eq(6).text());
-            total_col8 += parseInt($(this).find('td').eq(7).text());
-            total_col9 += parseInt($(this).find('td').eq(8).text());
+        $('tr:not(.acc)').each(function () {
+            debugger;
+            // .eq(0) representa la fila 1   
+            total_col1 += Number($(this).find('td').eq(0).text());
+            total_col2 += Number($(this).find('td').eq(1).text());
+            total_col3 += Number($(this).find('td').eq(2).text());
+            total_col4 += Number($(this).find('td').eq(3).text());
+            total_col5 += Number($(this).find('td').eq(4).text());
+            total_col6 += Number($(this).find('td').eq(5).text());
+            total_col7 += Number($(this).find('td').eq(6).text());
+            total_col8 += Number($(this).find('td').eq(7).text());
+            total_col9 += Number($(this).find('td').eq(8).text());
         });
         //Construyo el html para añadir a la tabla
         var htmlFila = "<td>" + total_col1 + "</td>";
