@@ -1,4 +1,4 @@
-
+/*Todos los warning del validador css en cuanto a redefinición son debidos a las media queries
 /************* BODY Y ESTRUCTURA +++++++++++++*/
 
 /*(0,0,1)*/
@@ -39,7 +39,7 @@ a:active { color: orange; }
 /*(0,0,1)*/
 main {
     
-    padding: 3em;
+    padding: 1em;
 }
 
 /*(0,0,2)*/
@@ -109,7 +109,6 @@ nav {
     grid-area: a; 
     display: flex;
     flex-direction: column; 
-    /*padding: 30px;*/
 }
 
 /*(0,0,1)*/
@@ -137,11 +136,7 @@ footer{
         display : block;
         
     }
-    /*(0,0,1)*/
-    main {
-        padding: 1em;
-        
-    }
+
     /*(0,0,2)*/
     main > h2 {
         margin: 0.5em;
